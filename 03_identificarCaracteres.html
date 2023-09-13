@@ -6,10 +6,20 @@
     */
 
     //Entrada
-
-
+    let palavra = prompt("Insira uma palavra:").trim();
+    let vogais = ["a", "e", "i", "o", "u"];
+    let NumeroVogais = 0;
+    let NumeroConsoantes = 0;
     //Processamento
-
+    for (const letra of palavra) {
+        for (const vogal of vogais) {
+            if (letra.includes(vogal)) {
+                NumeroVogais++;
+            }
+        }
+    }
+    NumeroConsoantes = palavra.length - NumeroVogais;
+    alert(`O número de Vogais é ${NumeroVogais} e o número de consoantes é ${NumeroConsoantes}`);
 
     //Saída
 

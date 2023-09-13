@@ -7,11 +7,16 @@
     */
 
     //Entrada
-
+    let lista = ["A", "E", 2, 4.8, "CINQUENTA", "Araquari", 80, 10, 3.2];
 
     //Processamento
-
-
+    let soma = 0;
+    for (const numero of lista) {
+        if (!isNaN(numero)) {
+            soma += numero
+        } else {}
+    }
+    alert(`A soma dos números da lista informada é ${soma.toFixed(0).replace(".",",")}`);
     //Saída
 
 </script>

@@ -7,10 +7,21 @@
     */
 
     //Entrada
-
+    const notasAluno = [7, 5, 9, 8];
 
     //Processamento
-
+    let numeroMax = notasAluno[0];
+    let numeroMin = notasAluno[0];
+    let media = 0;
+    for (const numero of notasAluno) {
+        if (numero > numeroMax) {
+            numeroMax = numero
+        } else if (numero < numeroMin) {
+            numeroMin = numero
+        }
+        media += numero
+    }
+    alert(`O número máximo é ${numeroMax}, o número mínimo é ${numeroMin} e a média do aluno é ${(media / notasAluno.length).toFixed(2).replace(".",",")}`);
 
     //Saída
 

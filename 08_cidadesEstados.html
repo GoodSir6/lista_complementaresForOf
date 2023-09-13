@@ -8,11 +8,23 @@
     */
 
     //Entrada
-
+    let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
 
     //Processamento
+    let estadoSC = [];
+    let estadoPR = [];
+    let estadoRS = [];
+    let estados = [];
 
-
+    for (const cidade of cidades) {
+        const qualEstado = prompt(`A qual estado pertence a cidade ${cidade}? PR-Paraná, SC-Santa Catarina, RS-Rio Grande do Sul`).toLowerCase();
+        (qualEstado == "pr") ? estadoPR.push(cidade) : (
+        qualEstado == "sc") ? estadoSC.push(cidade) : estadoRS.push(cidade);
+    }
+    estados.push(estadoSC.length, estadoPR.length, estadoRS.length);
+    estados.sort().reverse();
+    
+    
     //Saída
 
 </script>

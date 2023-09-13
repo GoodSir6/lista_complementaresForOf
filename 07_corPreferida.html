@@ -8,11 +8,18 @@
     */
 
     //Entrada
-
+    let cores = ["Branco", "Azul", "Marrom", "Cinza", "Verde", "Amarelo", "Vermelho", "Preto"];
 
     //Processamento
-
+    let coresGosta = [];
+    for (const cor of cores) {
+        const gosta = prompt(`Você gosta da cor ${cor}? S-Sim N-Não`).toLowerCase();
+        if (gosta == "s") {
+            coresGosta.push(cor);
+        } else {}
+    }
 
     //Saída
+    alert(`Você gosta das cores: ${coresGosta.join(", ")} que são no total: ${coresGosta.length} cores`);
 
 </script>
