@@ -14,17 +14,18 @@
     let estadoSC = [];
     let estadoPR = [];
     let estadoRS = [];
-    let estados = [];
 
     for (const cidade of cidades) {
         const qualEstado = prompt(`A qual estado pertence a cidade ${cidade}? PR-Paraná, SC-Santa Catarina, RS-Rio Grande do Sul`).toLowerCase();
         (qualEstado == "pr") ? estadoPR.push(cidade) : (
         qualEstado == "sc") ? estadoSC.push(cidade) : estadoRS.push(cidade);
     }
-    estados.push(estadoSC.length, estadoPR.length, estadoRS.length);
-    estados.sort().reverse();
-    
-    
-    //Saída
+    let mensagemF = [
+        ["Os estados de Santa Catarina são:", estadoSC.join(" - ")],
+        ["\nOs estados do Paraná são:", estadoPR.join(" - ")],
+        ["\nOs estados de Rio Grande do Sul são:", estadoRS.join(" - ")]
+    ];
+
+    alert(`${mensagemF.sort((a, b) => b[1].length - a[1].length)}`);
 
 </script>
